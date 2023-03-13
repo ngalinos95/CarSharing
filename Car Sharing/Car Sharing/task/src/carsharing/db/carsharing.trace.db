@@ -1,0 +1,678 @@
+2023-03-10 15:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE   COMPANY (ID INTEGER not NULL,  NAME VARCHAR(255)) [42101-200]
+2023-03-10 20:58:25 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARSHARINGORDER" not found; SQL statement:
+SELECT * FROM carsharingORDER BY ID ASC [42102-200]
+2023-03-10 21:00:40 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARSHARINGORDER" not found; SQL statement:
+SELECT * FROM carsharingORDER BY ID ASC [42102-200]
+2023-03-10 21:00:51 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARSHARING" not found; SQL statement:
+SELECT * FROM carsharing [42102-200]
+2023-03-12 11:42:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "ID"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR(ID INT PRIMARY KEY AUTO_INCREMENT,NAME VARCHAR(255) NOT NULL UNIQUE,COMPANY ID INT NOT NULL,FOREIGN KEY (COMPANY ID) REFERENCES COMPANY(ID)) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Main.main(Main.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 11:44:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "ID"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (ID INT PRIMARY KEY AUTO_INCREMENT,NAME VARCHAR(255) NOT NULL UNIQUE,COMPANY ID INT NOT NULL,FOREIGN KEY (COMPANY ID) REFERENCES COMPANY(ID)) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Main.main(Main.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 11:44:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "ID"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (ID INT PRIMARY KEY AUTO_INCREMENT,NAME VARCHAR(255) NOT NULL UNIQUE,COMPANY ID INT NOT NULL,) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Main.main(Main.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 11:45:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "ID"; SQL statement:
+CREATE TABLE IF NOT EXISTS CAR (ID INT PRIMARY KEY AUTO_INCREMENT ,NAME VARCHAR(255) NOT NULL UNIQUE, COMPANY ID INT NOT NULL) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Main.main(Main.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 11:48:03 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 11:49:10 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 11:59:41 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:00:22 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:00:44 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "2" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:06:27 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:09:51 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "COMPANY" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at carsharing.Main.main(Main.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:10:16 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "COMPANY" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at carsharing.Main.main(Main.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:10:32 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:10:47 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:16:12 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:16:22 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:16:48 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:298)
+	at carsharing.Main.main(Main.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 12:17:14 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:18:51 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:20:05 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:25:19 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:27:32 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:28:12 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 12:31:29 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 13:05:43 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "COMPANY_ID" not found; SQL statement:
+SELECT * FROM COMPANY WHERE COMPANY_ID= 1ORDER BY ID ASC [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:190)
+	at org.h2.command.dml.Select.prepare(Select.java:1209)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at carsharing.Main.main(Main.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 13:20:04 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 13:21:52 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-12 13:35:34 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CAR (NAME,COMPANY_ID) VALUES (,[*] 1)"; expected "), DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+INSERT INTO CAR (NAME,COMPANY_ID) VALUES (, 1) [42001-200]
+2023-03-12 13:38:32 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CAR (NAME,COMPANY_ID) VALUES (,[*] 1)"; expected "), DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+INSERT INTO CAR (NAME,COMPANY_ID) VALUES (, 1) [42001-200]
+2023-03-12 13:39:19 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CAR (NAME,COMPANY_ID) VALUES (,[*] 1)"; expected "), DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+INSERT INTO CAR (NAME,COMPANY_ID) VALUES (, 1) [42001-200]
+2023-03-12 13:44:00 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT ID , NAMEFROM CAR WHERE COMPANY_ID= 1ORDER BY ID ASC [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Select.prepare(Select.java:1206)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at carsharing.Main.main(Main.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 13:51:31 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER CAR[*] ALTER COLUMN ID RESTART WITH 1"; expected "TABLE, USER, INDEX, SCHEMA, SEQUENCE, VIEW"; SQL statement:
+ALTER CAR ALTER COLUMN ID RESTART WITH 1 [42001-200]
+2023-03-12 13:51:51 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER CAR[*] ALTER COLUMN ID RESTART WITH1"; expected "TABLE, USER, INDEX, SCHEMA, SEQUENCE, VIEW"; SQL statement:
+ALTER CAR ALTER COLUMN ID RESTART WITH1 [42001-200]
+2023-03-12 13:55:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER CAR[*] ALTER COLUMN ID RESTART WITH1"; expected "TABLE, USER, INDEX, SCHEMA, SEQUENCE, VIEW"; SQL statement:
+ALTER CAR ALTER COLUMN ID RESTART WITH1 [42001-200]
+2023-03-12 13:55:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER CAR[*] ALTER COLUMN ID RESTART WITH 1"; expected "TABLE, USER, INDEX, SCHEMA, SEQUENCE, VIEW"; SQL statement:
+ALTER CAR ALTER COLUMN ID RESTART WITH 1 [42001-200]
+2023-03-12 20:00:11 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COSTUMER" not found; SQL statement:
+SELECT * FROM COSTUMER ORDER BY ID ASC [42102-200]
+2023-03-12 20:01:01 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COSTUMER" not found; SQL statement:
+SELECT * FROM COSTUMER ORDER BY ID ASC [42102-200]
+2023-03-12 20:01:17 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "RENTER_CAR_ID" not found; SQL statement:
+INSERT INTO CUSTOMER (NAME,RENTER_CAR_ID) VALUES ('First customer',NULL) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.Main.main(Main.java:209)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 20:04:50 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT ID,NAMEFROM CUSTOMER ORDER BY ID ASC [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Select.prepare(Select.java:1206)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at carsharing.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-12 23:49:58 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:00:10 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:04:47 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:05:10 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:06:34 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:10:30 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:18:30 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:20:40 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:20:51 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 00:21:02 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:19:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:28:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:29:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:30:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:31:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:33:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:33:29 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:33:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:33:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:34:43 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:36:01 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:37:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:38:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:39:05 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:41:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:43:38 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:46:19 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:49:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:53:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:54:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:56:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:56:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 01:57:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:00:29 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:04:50 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT NAME FROM CAR WHERE ID=[*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT NAME FROM CAR WHERE ID= [42001-200]
+2023-03-13 02:04:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:05:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "COMPANY_ID" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at carsharing.Main.main(Main.java:328)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-13 02:06:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:10:06 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "COMPANY_ID" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at carsharing.Main.main(Main.java:331)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-13 02:11:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "COMPANY_ID" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at carsharing.Main.main(Main.java:331)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-13 02:13:23 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:14:01 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:15:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:16:02 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-200]
+2023-03-13 02:51:43 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CUSTOMER.CAR_ID" not found; SQL statement:
+SELECT CAR.ID, CAR.NAME, CAR.COMPANY_ID  FROM CAR LEFT JOIN CUSTOMER ON CAR.ID = CUSTOMER.CAR_ID WHERE CUSTOMER.NAME IS NULL [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.table.TableFilter.createIndexConditions(TableFilter.java:749)
+	at org.h2.table.TableFilter.createIndexConditions(TableFilter.java:756)
+	at org.h2.command.dml.Select.preparePlan(Select.java:1360)
+	at org.h2.command.dml.Select.prepare(Select.java:1227)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at carsharing.Main.main(Main.java:219)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
