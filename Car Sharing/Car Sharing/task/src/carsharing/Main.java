@@ -23,7 +23,9 @@ public class Main {
              Statement st = conn.createStatement();
              String sql =  "CREATE TABLE IF NOT EXISTS COMPANY " +
                      "(ID INT PRIMARY KEY AUTO_INCREMENT, " +
-                     "NAME VARCHAR(255) NOT NULL UNIQUE)";
+                     "NAME VARCHAR(255) NOT NULL UNIQUE, "+
+                     "COMPANY_ID INT NOT NULL, "+
+                     "FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY(ID))";
              st.executeUpdate(sql);
              //STEP 3b:Create the table CAR with the proper statement and execute the statement
              sql="CREATE TABLE IF NOT EXISTS CAR " +
@@ -163,8 +165,8 @@ public class Main {
                          System.out.println("Enter the company name:");
                          sc.nextLine();
                          companyName=sc.nextLine();
-                         sql="INSERT INTO "+"COMPANY " +"(NAME) "+
-                                 "VALUES ('"+companyName+"')";
+                         sql="INSERT INTO "+"CUSTOMER " +"(NAME,RENTED_CAR_ID) "+
+                                 "VALUES ('"+companyName+"',NULL)";
                          st.executeUpdate(sql);
                          System.out.println("The company was created!");
                      }

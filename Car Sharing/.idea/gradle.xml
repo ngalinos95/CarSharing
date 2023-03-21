@@ -8,14 +8,12 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Car Sharing/task" />
             <option value="$PROJECT_DIR$/Car Sharing/task/build/classes/java" />
-            <option value="$PROJECT_DIR$/Car Sharing/task/build/generated/sources/annotationProcessor/java" />
-            <option value="$PROJECT_DIR$/Car Sharing/task/build/generated/sources/headers/java" />
             <option value="$PROJECT_DIR$/Car Sharing/task/build/reports/tests" />
             <option value="$PROJECT_DIR$/Car Sharing/task/build/test-results" />
             <option value="$PROJECT_DIR$/Car Sharing/task/build/tmp" />
